@@ -1,0 +1,46 @@
+{% extends 'hamsters/template.html' %}
+
+{% block content %}
+    <div class="col-12 col-md-6">
+            <h2 class="text-center mb-3">Les animaux</h2>
+            <div class="row">
+                {% for animal in animaux %}
+        <div class="col-12 col-md-6 p-2 m-auto card-holder">
+            <div class="card mini-card m-auto">
+                <img src="{{animal.photo}}" alt="image animal"/>
+
+                <div class="text-center my-2">
+                    {{ animal.id_animal }} <span class="etat etat-anim">{{animal.etat }}</span>
+                </div>
+                <div class="text-center mb-2">
+                    <a href="animal/{{animal.id_animal}}" class="btn btn-primary text-center">Plus de détails</a>
+                </div>
+
+            </div>
+        </div>
+    {% endfor %}
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <h2 class="text-center mb-3">Les équipements</h2>
+            <div class="row">
+                {% for equipement in equipements %}
+        <div class="col-12 col-md-6 p-2 m-auto card-holder">
+            <div class="card mini-card m-auto">
+                <img src="{{equipement.photo}}" alt="image equipement"/>
+
+                <div class="text-center my-2">
+                    {{ equipement.id_equip }} <span class="etat {{equipement.disponibilite}}">{{equipement.disponibilite }}</span>
+                </div>
+                <div class="text-center mb-2">
+                    <a href="#" class="btn btn-primary text-center">Plus de détails</a>
+                </div>
+
+            </div>
+        </div>
+    {% endfor %}
+            </div>
+
+        </div>
+{% endblock %}
+

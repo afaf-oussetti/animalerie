@@ -1,0 +1,44 @@
+{% extends 'hamsters/template.html' %}
+
+{% block content %}
+
+<div class="col-12 col-md-6 p-2 card-holder">
+    <div class="card  m-auto">
+        <img src="{{animal.photo}}" alt="image animal"/>
+
+        <div class="text-center my-2">
+            {{ animal.id_animal }} <span class="etat etat-anim">{{animal.etat }}</span>
+        </div>
+        <div class="text-center my-2">
+            Type: <b>{{ animal.type }}</b>
+        </div>
+        <div class="text-center my-2">
+            Race: <b>{{ animal.race }}</b>
+        </div>
+        <div class="text-center my-2">
+            Etat: <b>{{ animal.etat }}</b>
+        </div>
+
+    </div>
+</div>
+<div class="col-12 col-md-6 p-2 card-holder">
+
+    <h2 class="mb-3 text-center">
+        Position actuelle: <b>{{ equipement.id_equip }}</b>
+    </h2>
+    <div class="card w-75 m-auto">
+        <img src="{{equipement.photo}}" alt="image equipement"/>
+
+    </div>
+</div>
+<div class="col-12 p-2 mb-4 change-state">
+    <h3>Déplacer l'animal</h3>
+    <div class="row">
+       <div class="col-8 offset-2 text-center">
+           <a href="/deplacer_animal/{{animal.id_animal}}" class="btn btn-success">Déplacer à l'état suivant</a>
+           <a href="/deplacer_animal_litière/{{animal.id_animal}}" class="btn btn-secondary">Déplacer à la litière</a>
+       </div>
+
+    </div>
+</div>
+{% endblock %}

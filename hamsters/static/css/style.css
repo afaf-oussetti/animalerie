@@ -1,0 +1,39 @@
+.mini-card img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+    border-radius: 5px 5px 0 0;
+}
+.mini-card{
+    max-width:250px;
+}
+
+.etat{
+    border-radius:5px;
+    padding: 3px 7px;
+}
+
+.card-holder .libre{
+    background:#20c997;
+}
+
+.etat-anim{
+    background:darkgrey;
+    color:white;
+}
+
+.card-holder .occupé{
+    background : #dc3545;
+    color:white;
+}
+
+.change-state .occupé{
+    background:red;
+    color:white;
+    cursor:not-allowed;
+}
+
+.change-state .libre{
+    background:green;
+    color:white;
+}
