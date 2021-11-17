@@ -3,6 +3,9 @@
 {% block content %}
 
 <div class="col-12 col-md-6 p-2 card-holder">
+    <h2 class="mb-3 text-center">
+        🐹 {{ animal.id_animal }} 🐿
+    </h2>
     <div class="card  m-auto">
         <img src="{{animal.photo}}" alt="image animal"/>
 
@@ -34,10 +37,10 @@
 <div class="col-12 p-2 mb-4 change-state">
     <h3>Déplacer l'animal</h3>
     <div class="row">
-       <div class="col-8 offset-2 text-center">
-           <a href="/deplacer_animal/{{animal.id_animal}}" class="btn btn-success">Déplacer à l'état suivant</a>
-           <a href="/deplacer_animal_litière/{{animal.id_animal}}" class="btn btn-secondary">Déplacer à la litière</a>
-       </div>
+        <div class="col-8 offset-2 text-center">
+            <a href="/deplacer_animal/{{animal.id_animal}}" class="btn btn-success">Déplacer à l'état suivant</a>
+            <a href="/deplacer_animal_litière/{{animal.id_animal}}" class="btn btn-secondary">Déplacer à la litière</a>
+        </div>
 
     </div>
 </div>

@@ -1,0 +1,21 @@
+{% extends 'hamsters/template.html' %}
+
+{% block content %}
+<div class="col-12 text-center">
+    <h2 class="mb-3 text-center">
+        equipement : <b>{{ equipement.id_equip }}</b>
+    </h2>
+</div>
+<div class="col-12 col-md-6 p-2 card-holder">
+    <img src="{{equipement.photo}}" class="w-75 m-auto" alt="image animal"/>
+</div>
+<div class="col-12 col-md-6 p-2 card-holder align-self-center">
+    <div class="text-center my-2">
+        equipement {{ equipement.id_equip }}
+    </div>
+    <div class="text-center my-2">
+        disponibilité <span class="etat {{equipement.disponibilite}}">{{equipement.disponibilite }}</span>
+    </div>
+</div>
+
+{% endblock %}
